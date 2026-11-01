@@ -1,0 +1,56 @@
+training:
+  test_size: 0.15
+  validation_size: 0.15
+  random_seed: 42
+  cv_folds: 5
+
+targets:
+  - tip_deflection_mm
+  - max_von_mises_MPa
+  - strain_energy_J
+
+features:
+  - length_mm
+  - width_mm
+  - thickness_mm
+  - youngs_modulus_GPa
+  - poisson_ratio
+  - force_N
+
+models:
+  linear_regression:
+    fit_intercept: true
+
+  polynomial_regression:
+    degree: 2
+    include_bias: true
+
+  random_forest:
+    n_estimators: 200
+    max_depth: null
+    min_samples_split: 5
+    n_jobs: -1
+    random_state: 42
+
+  xgboost:
+    n_estimators: 300
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+
+  gaussian_process:
+    n_restarts_optimizer: 5
+    normalize_y: true
+
+  mlp:
+    hidden_layer_sizes: [128, 64, 32]
+    activation: "relu"
+    max_iter: 500
+    random_state: 42
+
+uncertainty:
+  ensemble_n_estimators: 50
+  prediction_interval_alpha: 0.05   # 95 % intervals
+  flag_threshold_std_multiplier: 2.0

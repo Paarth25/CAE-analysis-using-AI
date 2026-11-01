@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# Environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated data and solver outputs – regenerate with scripts
+data/raw/cae/*.csv
+data/raw/cae/meshes/
+data/raw/cae/runs/
+data/interim/
+data/processed/
+*.frd
+*.dat
+*.sta
+*.cvg
+*.12d
+*.msh
+
+# Trained models (large binaries – store with Git LFS or DVC if needed)
+models/saved/*.pkl
+
+# Results (figures reproduced from notebooks)
+results/figures/
+results/reports/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config secrets
+*.env
+secrets.yaml

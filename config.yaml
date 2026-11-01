@@ -1,0 +1,32 @@
+# Global project configuration
+project:
+  name: "Suzuki CAE AI Platform"
+  version: "0.1.0"
+  random_seed: 42
+
+paths:
+  data_raw: "data/raw"
+  data_interim: "data/interim"
+  data_processed: "data/processed"
+  models_saved: "models/saved"
+  models_metadata: "models/metadata"
+  results: "results"
+
+design_space:
+  length_mm:    { min: 80,   max: 160  }
+  width_mm:     { min: 15,   max: 40   }
+  thickness_mm: { min: 2,    max: 6    }
+  youngs_modulus_GPa: { min: 65,  max: 210  }
+  poisson_ratio:      { min: 0.27, max: 0.35 }
+  force_N:      { min: 5,    max: 100  }
+
+simulation:
+  n_samples: 600
+  sampling_method: "lhs"   # latin hypercube sampling
+
+units:
+  length: "mm"
+  stress: "MPa"
+  force: "N"
+  modulus: "GPa"
+  mass: "kg"

@@ -1,0 +1,26 @@
+materials:
+  aluminium_6061:
+    name: "Aluminium 6061-T6"
+    youngs_modulus_GPa: 68.9
+    poisson_ratio: 0.33
+    density_kg_m3: 2700.0
+    yield_strength_MPa: 276.0
+    ultimate_strength_MPa: 310.0
+
+  steel_mild:
+    name: "Mild Steel S275"
+    youngs_modulus_GPa: 200.0
+    poisson_ratio: 0.30
+    density_kg_m3: 7850.0
+    yield_strength_MPa: 275.0
+    ultimate_strength_MPa: 430.0
+
+  steel_high:
+    name: "High-strength Steel S355"
+    youngs_modulus_GPa: 210.0
+    poisson_ratio: 0.30
+    density_kg_m3: 7850.0
+    yield_strength_MPa: 355.0
+    ultimate_strength_MPa: 490.0
+
+default_experimental_material: aluminium_6061

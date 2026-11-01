@@ -1,0 +1,19 @@
+mesh:
+  sizes_mm: [4.0, 2.5, 1.5]          # coarse / medium / fine
+  default_size_mm: 2.5
+  element_type: "C3D10"               # 10-node tetrahedral (CalculiX)
+  min_elements: 500
+
+solver:
+  executable: "ccx"                   # CalculiX binary name
+  timeout_seconds: 120
+  convergence_tolerance: 1.0e-6
+
+output_targets:
+  - tip_deflection_mm
+  - max_displacement_mm
+  - max_von_mises_MPa
+  - max_principal_stress_MPa
+  - max_strain
+  - strain_energy_J
+  - mass_kg
